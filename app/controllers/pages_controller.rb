@@ -5,11 +5,17 @@ class PagesController < ApplicationController
   end
 
   def about
-      @header = "welcome page"
+      @header = "This is the about page"
   end
 
   def contest
-      @header = "page"
+      @header = "This is the contest age"
   end
+
+  def kitten
+    requested_size = params[:size]
+    @kitten_url = "http://lorempixel.com/#{requested_size}/#{requested_size}/cats"
+  end
+
 
 end
